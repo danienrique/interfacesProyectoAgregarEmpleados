@@ -62,7 +62,7 @@ public class Menu extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			if(e.getSource()== agregarEmpleados) {
-				AgregarEmpleado ag = new AgregarEmpleado();
+				AgregarEmpleados ag = new AgregarEmpleados();
 				ag.setVisible(true);
 				dispose();
 			}
