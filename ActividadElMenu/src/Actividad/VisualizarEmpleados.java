@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
 
 public class VisualizarEmpleados extends JFrame {
 
@@ -38,6 +39,10 @@ public class VisualizarEmpleados extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(165, 112, 89, 23);
+		contentPane.add(btnNewButton);
+		
 	}
-
 }
+
