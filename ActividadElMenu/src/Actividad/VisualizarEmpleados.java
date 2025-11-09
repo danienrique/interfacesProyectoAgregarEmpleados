@@ -6,12 +6,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import javax.swing.JTable;
 
 public class VisualizarEmpleados extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -40,11 +41,9 @@ public class VisualizarEmpleados extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(64, 45, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		table = new JTable();
+		table.setBounds(341, 382, 172, 0);
+		contentPane.add(table);
 
 	}
-
 }
