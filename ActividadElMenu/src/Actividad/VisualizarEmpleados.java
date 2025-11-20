@@ -1,11 +1,11 @@
 package Actividad;
 
 import java.awt.EventQueue;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
 import javax.swing.JTable;
 
 public class VisualizarEmpleados extends JFrame {
@@ -13,7 +13,7 @@ public class VisualizarEmpleados extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
-
+	GestorEmpleados ge  = new GestorEmpleados();
 	/**
 	 * Launch the application.
 	 */
@@ -44,6 +44,10 @@ public class VisualizarEmpleados extends JFrame {
 		table = new JTable();
 		table.setBounds(341, 382, 172, 0);
 		contentPane.add(table);
-
+		ArrayList<Empleado> listaEmpleados = (ArrayList<Empleado>) GestorEmpleados.getEmpleados();
+		
+		for(Empleado e : listaEmpleados) {
+			
+		}
 	}
 }

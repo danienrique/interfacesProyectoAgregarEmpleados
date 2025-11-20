@@ -22,9 +22,11 @@ public class Menu extends JFrame {
 			visualizarEmpleados = new JMenuItem("Visualizar Empleados"), 
 			guardarEnArchivo = new JMenuItem("Guardar Empleados"),
 			menuEmpleados = new JMenuItem("Menu");
+	
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

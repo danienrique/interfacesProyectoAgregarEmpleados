@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import javax.swing.JRadioButtonMenuItem;
@@ -89,6 +92,7 @@ public class AgregarEmpleados extends JFrame implements ActionListener {
 		Nombre.setFont(new Font("Comic Sans MS", Font.PLAIN, 17));
 		Nombre.setBounds(28, 24, 86, 43);
 		ventana.add(Nombre);
+		
 
 		Apellidos = new JLabel("Apellidos: ");
 		Apellidos.setFont(new Font("Comic Sans MS", Font.PLAIN, 17));
@@ -159,6 +163,14 @@ public class AgregarEmpleados extends JFrame implements ActionListener {
 		ventana.add(NombreTxt);
 		NombreTxt.setColumns(10);
 
+		NombreTxt.addKeyListener(new KeyAdapter() {
+			public void keyTyped(KeyEvent e) {
+				if (NombreTxt.getText().length() >= 15) {
+					e.consume();
+				}
+			}
+		});
+
 		ApellidosTxt = new JTextField();
 		ApellidosTxt.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 		ApellidosTxt.setColumns(10);
@@ -221,9 +233,10 @@ public class AgregarEmpleados extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null, "Empleado añadido: " + "\n" + emp.toString());
 				GrupoEmpleados.add(emp);
 				limpiar();
-
+				GestorEmpleados.addEmpleado(emp);
 			}
 		}
+
 	};
 	ActionListener limpiarVentana = new ActionListener() {
 		@Override
